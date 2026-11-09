@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-06",
+  "title": "Hierarchical Multi-Lock Acquisition & Deadlock Avoidance",
+  "domain": "Systems & Concurrency",
+  "difficulty": "Hard",
+  "failure_mode": "Circular wait deadlocks under high thread contention and lock leakage on partial acquisition failure",
+  "invariant_guarantee": "Strict global total-ordering lock acquisition (eliminating Coffman circular wait) with guaranteed LIFO exception-safe release",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "DeepSeek-Coder"]
+}

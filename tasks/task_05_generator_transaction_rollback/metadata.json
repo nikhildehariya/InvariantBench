@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-05",
+  "title": "ACID Transaction Rollback on Generator Exit & Savepoint Invariance",
+  "domain": "Systems & Database Internals",
+  "difficulty": "Expert",
+  "failure_mode": "Silent state pollution and lock starvation when generator context managers are abandoned via GeneratorExit (BaseException)",
+  "invariant_guarantee": "Strict transactional atomicity: all uncommitted state changes are rolled back on any exit including GeneratorExit and KeyboardInterrupt, with nested savepoint isolation",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "o1-mini"]
+}

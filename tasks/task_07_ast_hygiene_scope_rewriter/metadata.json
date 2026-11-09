@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-07",
+  "title": "Python AST Instrumentation & Docstring Hygiene Invariance",
+  "domain": "Metaprogramming & Compilers",
+  "difficulty": "Hard",
+  "failure_mode": "Silent destruction of function docstrings, missing AST location offsets, and coroutine corruption on async def nodes",
+  "invariant_guarantee": "Strict preservation of function docstrings (__doc__), valid line/col AST metadata for bytecode compilation, and transparent async coroutine instrumentation",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "DeepSeek-Coder"]
+}

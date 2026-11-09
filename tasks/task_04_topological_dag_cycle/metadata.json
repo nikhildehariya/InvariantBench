@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-04",
+  "title": "Deterministic DAG Resolution & Minimal Cycle Path Extraction",
+  "domain": "Systems & Graph Theory",
+  "difficulty": "Hard",
+  "failure_mode": "Recursion limit exhaustion on deep graphs, non-deterministic build ordering, and failure to extract minimal cycle paths",
+  "invariant_guarantee": "Iterative O(V+E) execution safe for 10,000+ depth chains, deterministic lexicographical tie-breaking, and exact minimal cycle path isolation",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "DeepSeek-Coder"]
+}
