@@ -1,0 +1,37 @@
+{
+  "benchmark_name": "InvariantBench",
+  "version": "1.0.0",
+  "provenance_description": "Empirical failure mode attribution across frontier LLM engines tested on InvariantBench tasks",
+  "evaluated_models": [
+    {
+      "model": "GPT-4o",
+      "model_id": "gpt-4o-2024-08-06",
+      "sampling_parameters": { "temperature": 0.2, "top_p": 0.95 },
+      "primary_failure_domains": ["Async Concurrency (TASK-01)", "AST Metaprogramming (TASK-07)", "Operator Precedence (TASK-08)"]
+    },
+    {
+      "model": "Claude 3.5 Sonnet",
+      "model_id": "claude-3-5-sonnet-20241022",
+      "sampling_parameters": { "temperature": 0.2, "top_p": 0.95 },
+      "primary_failure_domains": ["Autograd Broadcast Invariants (TASK-02)", "Financial Penny-Drift (TASK-03)", "Lazy Iterator Protocol (TASK-09)"]
+    },
+    {
+      "model": "OpenAI o1-mini",
+      "model_id": "o1-mini-2024-09-12",
+      "sampling_parameters": { "temperature": 1.0 },
+      "primary_failure_domains": ["DAG Deep Recursion (TASK-04)", "GeneratorExit Rollback (TASK-05)", "Concurrent LRU-TTL Cache (TASK-10)"]
+    }
+  ],
+  "tasks": {
+    "TASK-01": { "target_model": "GPT-4o", "observed_failure": "Orphan background task abandonment under asyncio.shield" },
+    "TASK-02": { "target_model": "Claude-3.5-Sonnet", "observed_failure": "Adjoint overwrite and failure to sum across broadcast dimensions" },
+    "TASK-03": { "target_model": "Claude-3.5-Sonnet", "observed_failure": "Penny drift accumulation and arbitrary last-element remainder dumping" },
+    "TASK-04": { "target_model": "DeepSeek-Coder / o1-preview", "observed_failure": "Recursion limit exhaustion on 3000-deep dependency chains" },
+    "TASK-05": { "target_model": "o1-mini", "observed_failure": "GeneratorExit exception unhandled in transactional context manager" },
+    "TASK-06": { "target_model": "GPT-4o", "observed_failure": "Circular wait deadlock and self-deadlock on duplicate keys" },
+    "TASK-07": { "target_model": "GPT-4o", "observed_failure": "Function docstring destruction via body.insert(0, ...)" },
+    "TASK-08": { "target_model": "GPT-4o / Gemini-1.5-Pro", "observed_failure": "Left-associativity for ** (2**3**2 evaluating to 64 instead of 512)" },
+    "TASK-09": { "target_model": "Claude-3.5-Sonnet", "observed_failure": "Eager intermediate list materialization breaking infinite streams" },
+    "TASK-10": { "target_model": "GPT-4o / o1-mini", "observed_failure": "LRU queue pollution on expired hits and OrderedDict mutation during iteration" }
+  }
+}
