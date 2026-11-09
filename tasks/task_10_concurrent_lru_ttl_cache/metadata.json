@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-10",
+  "title": "Thread-Safe LRU-TTL Cache with Atomic Eviction Invariants",
+  "domain": "Systems & In-Memory Caching",
+  "difficulty": "Expert",
+  "failure_mode": "Race conditions during concurrent TTL expiration, wall-clock time drift traps, and corrupting LRU ordering on expired key lookups",
+  "invariant_guarantee": "Strict monotonic time tracking, O(1) atomic eviction under high thread contention, zero mutation-during-iteration errors, and prioritization of expired items over valid LRU items during capacity eviction",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "o1-mini"]
+}

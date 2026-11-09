@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-08",
+  "title": "Recursive Descent Parser - Operator Precedence & Associativity Invariants",
+  "domain": "Compilers & Language Theory",
+  "difficulty": "Hard",
+  "failure_mode": "LLMs build Pratt/recursive descent parsers that violate operator precedence or right-associativity for exponentiation, producing wrong evaluation order",
+  "invariant_guarantee": "AST evaluation order strictly matches standard mathematical precedence (* > + ) and right-to-left associativity for ** (exponentiation), verified by exhaustive property testing against Python's own eval()",
+  "targeted_llms": [
+    "GPT-4o",
+    "Claude-3.5-Sonnet",
+    "Gemini-1.5-Pro"
+  ]
+}

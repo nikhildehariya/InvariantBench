@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-09",
+  "title": "Lazy Iterator Pipeline - Strict Evaluation Order & StopIteration Isolation",
+  "domain": "Python Internals / Iterator Protocol",
+  "difficulty": "Hard",
+  "failure_mode": "LLMs implement lazy pipelines that eagerly materialize intermediate collections, violate single-pass evaluation constraints, or allow StopIteration to escape generator frames (PEP 479)",
+  "invariant_guarantee": "Zero intermediate list materializations (O(1) memory), exactly-once element production across chained transformations, and strict PEP-479 StopIteration-to-RuntimeError conversion",
+  "targeted_llms": [
+    "GPT-4o",
+    "Claude-3.5-Sonnet",
+    "DeepSeek-Coder"
+  ]
+}
