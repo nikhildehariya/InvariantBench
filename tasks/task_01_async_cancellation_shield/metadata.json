@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-01",
+  "title": "Async Orphan Task Prevention & Shielded Cancellation",
+  "domain": "Async Concurrency",
+  "difficulty": "Hard",
+  "failure_mode": "Silent background task abandonment and orphan task leaks under asyncio cancellation cascades",
+  "invariant_guarantee": "All spawned background coroutines are strictly tracked, shielded critical sections complete deterministically, and shutdown guarantees zero leaked/dangling asyncio.Task instances",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "Gemini-1.5-Pro"]
+}

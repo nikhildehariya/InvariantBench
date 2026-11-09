@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-03",
+  "title": "Discrete Financial Penny-Drift & Conservation Invariants",
+  "domain": "Computational Finance",
+  "difficulty": "Hard",
+  "failure_mode": "Cumulative penny-drift roundoff error violating Conservation of Money and arbitrary last-element remainder dumping",
+  "invariant_guarantee": "The sum of all discrete currency allocations must strictly equal the total input amount to zero cents of drift (sum(allocations) == total), implementing the Hare-Niemeyer Largest Remainder method with deterministic tie-breaking",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "Llama-3.1-405B"]
+}

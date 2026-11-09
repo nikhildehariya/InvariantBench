@@ -1,0 +1,9 @@
+{
+  "task_id": "TASK-02",
+  "title": "Reverse-Mode Autodiff Engine with Broadcast Invariants",
+  "domain": "Deep Learning / Computational Math",
+  "difficulty": "Expert",
+  "failure_mode": "Silent gradient corruption via failure to reduce gradients across broadcasted dimensions and node gradient overwrite traps",
+  "invariant_guarantee": "Reverse-mode gradients must match finite-difference numerical gradients within 1e-4 tolerance, handle multi-use node gradient accumulation (+=), and properly reduce gradients across broadcasted singleton dimensions",
+  "targeted_llms": ["GPT-4o", "Claude-3.5-Sonnet", "o1-mini"]
+}
