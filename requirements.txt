@@ -1,0 +1,7 @@
+# InvariantBench: Dependencies
+# All tasks are implemented in the Python Standard Library + NumPy ONLY.
+# NumPy is used exclusively for float64 array math in Task-02 (custom autograd engine).
+# Task-02 implements a from-scratch reverse-mode autodiff engine using ONLY numpy arrays
+# - it does NOT use PyTorch, TensorFlow, or any deep learning framework.
+# No GPU, CUDA, or heavy framework installation required.
+numpy>=1.20.0
